@@ -32,6 +32,14 @@ export const ContactCardContainer = styled.div`
 export const Socials = styled(SocialsContainer)`
   justify-content: center;
   gap: 1rem;
+
+  * {
+    transition: 0.1s ease-in-out;
+  }
+
+  *:hover {
+    transform: scale(1.06);
+  }
 `;
 
 export const FavoriteButton = styled.button`

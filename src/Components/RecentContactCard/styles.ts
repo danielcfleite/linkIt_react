@@ -36,12 +36,22 @@ export const EmailAndPhoneContainer = styled.div`
   align-items: center;
 `;
 
-export const EmailAndPhoneItemContainer = styled.div`
+export const EmailAndPhoneItemContainer = styled.button`
   display: flex;
   gap: 8px;
+  color: white;
+  background-color: ${colors.brand};
+  width: 50%;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 8px 0;
 
-  :first-child {
-    color: ${colors.brand};
+  &:hover {
+    transform: scale(1.1);
   }
 `;
 

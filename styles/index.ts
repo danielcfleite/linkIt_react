@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   /* width */
 ::-webkit-scrollbar {
   width: 0.5rem;
-  height: 6px;
+  height: 8px;
 }
 
 /* Track */
@@ -26,6 +26,8 @@ export const GlobalStyle = createGlobalStyle`
 ::-webkit-scrollbar-thumb {
   background: ${colors.brand};
   border-radius: 10px;
+  cursor: move;
+
 }
 }
 
