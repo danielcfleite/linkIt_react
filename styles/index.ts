@@ -39,6 +39,8 @@ body{
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 244px auto;
+  max-width: 1500px;
+  margin: auto;
 `;
 
 export const MainContainer = styled.main`

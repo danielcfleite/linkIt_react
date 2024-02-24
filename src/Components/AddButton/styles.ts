@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/variables";
+import { Link } from "react-router-dom";
 
-export const Circle = styled.button`
+export const Circle = styled(Link)`
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -19,6 +20,7 @@ export const Circle = styled.button`
   align-items: center;
   justify-content: center;
   padding-bottom: 5px;
+  text-decoration: none;
 
   &:hover {
     opacity: 1;
