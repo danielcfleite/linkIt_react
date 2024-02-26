@@ -5,6 +5,12 @@ import { colors } from "../../../styles/variables";
 export const ContactListHeader = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1400px){
+   
+   flex-direction: column;
+   align-items: center;
+ }
 `;
 
 interface TagProps {
@@ -29,4 +35,9 @@ export const Tag = styled(EmailAndPhoneItemContainer)<TagProps>`
 export const TagContainer = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 1400px){
+   
+    display: block;
+  }
 `;

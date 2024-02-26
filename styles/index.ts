@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { colors } from "./variables";
+import { Link } from "react-router-dom";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -47,6 +48,10 @@ export const MainContainer = styled.main`
   padding: 25px 50px;
   height: 100vh;
   overflow-y: scroll;
+
+  @media (max-width: 1400px){
+    width: 100vw;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -74,3 +79,20 @@ export const CategoryTitle = styled.h3`
   font-size: 1rem;
   font-weight: bold;
 `;
+
+export const BackButton = styled(Link)`
+text-decoration: none;
+color: ${colors.fontColor};
+
+&:hover {
+  color: ${colors.brand};
+}
+
+
+`
+
+export const PageTitle = styled.h2 `
+margin-top: 2rem;
+font-size: 2rem;
+margin-bottom: 2rem;
+`

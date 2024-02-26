@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 // import { RiContactsLine } from "react-icons/ri";
 import { RiContactsFill } from "react-icons/ri";
-import { FaRegStar } from "react-icons/fa6";
-import { IoSettingsOutline } from "react-icons/io5";
+import { LuSunMedium } from "react-icons/lu";
 import { GrLanguage } from "react-icons/gr";
 
 import { Aside } from "./styles";
@@ -17,13 +16,10 @@ export const SideBar = () => {
           <RiContactsFill />
           Contatos
         </Link>
+
         <Link to="/">
-          <FaRegStar />
-          Favoritos
-        </Link>
-        <Link to="/">
-          <IoSettingsOutline />
-          Configurações
+        <LuSunMedium />
+           Light
         </Link>
         <Link to="/">
           <GrLanguage />

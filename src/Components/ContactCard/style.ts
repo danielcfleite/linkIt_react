@@ -27,6 +27,13 @@ export const ContactCardContainer = styled.div`
     border-radius: 50%;
     border: 1px solid ${colors.brand};
   }
+
+  @media (max-width: 1400px){
+     flex-direction: column;
+     width: 100%;
+     padding: 4rem 0;
+     height: 350px;
+  }
 `;
 
 export const Socials = styled(SocialsContainer)`
@@ -39,6 +46,10 @@ export const Socials = styled(SocialsContainer)`
 
   *:hover {
     transform: scale(1.06);
+  }
+
+  @media (max-width: 1400px){
+    display: none;
   }
 `;
 

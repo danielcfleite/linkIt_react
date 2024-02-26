@@ -15,7 +15,7 @@ export const RecentContactCardContainer = styled.div`
   -webkit-box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
   box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.1s;
 
   img {
     width: 100px;
@@ -47,7 +47,7 @@ export const EmailAndPhoneItemContainer = styled.button`
   justify-content: center;
   border: none;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s;
   padding: 8px 0;
 
   &:hover {

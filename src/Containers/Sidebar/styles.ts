@@ -11,6 +11,10 @@ export const Aside = styled.aside`
   border-right: 2px solid rgba(0, 0, 0, 0.009);
   font-weight: 500;
 
+  @media (max-width: 1400px){
+    display: none;
+  }
+
   a {
     text-decoration: none;
     color: ${colors.secondaryFontColor};
