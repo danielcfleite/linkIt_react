@@ -2,7 +2,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Container, GlobalStyle } from "../styles/index";
 import { Home } from "./pages/Home";
 import { Add } from "./pages/Add";
-import { MobileNav } from "./Components/MobileNav";
 
 const routes = createBrowserRouter([
   {
