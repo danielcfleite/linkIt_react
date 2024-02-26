@@ -39,5 +39,6 @@ export const TagContainer = styled.div`
   @media (max-width: 1400px){
    
     display: block;
+    margin-bottom: 2rem;
   }
 `;

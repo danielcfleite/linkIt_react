@@ -25,4 +25,8 @@ export const Circle = styled(Link)`
   &:hover {
     opacity: 1;
   }
+
+  @media (max-width: 1400px){
+    opacity: 1;
+  }
 `;

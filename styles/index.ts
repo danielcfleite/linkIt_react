@@ -51,7 +51,7 @@ export const MainContainer = styled.main`
 
   @media (max-width: 1400px){
     width: 100vw;
-    padding-bottom: 4rem;
+    padding-bottom: 7rem;
   }
 `;
 
