@@ -22,6 +22,10 @@ export const Circle = styled(Link)`
   padding-bottom: 5px;
   text-decoration: none;
 
+  @media (max-width: 1400px){
+    display: none;
+  }
+
   &:hover {
     opacity: 1;
   }
