@@ -12,13 +12,14 @@ import ContactClass from "../../models/contact"
 type Props = ContactClass
 
 export const RecentContactCard = ({fullName,
-  email,
-  phoneNumber,
+  // email,
+  // phoneNumber,
   profilePictureUrl,
-  id,
-  socialMedia,
+  // id,
+  // socialMedia,
   group,
-isFavorite}: Props) => {
+// isFavorite
+}: Props) => {
   return (
     <RecentContactCardContainer>
       <NameAndCateoryContainer>

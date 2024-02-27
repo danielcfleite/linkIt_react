@@ -4,8 +4,9 @@ import { BackButton, MainContainer, PageTitle } from "../../../styles"
 import { FaArrowLeft } from "react-icons/fa"
 import { SideBar } from "../../Containers/Sidebar"
 import { useEffect } from "react"
-import { getUniqueGroups, loadContactsFromLocalStorage } from "../../store/reducers/contacts"
+import { loadContactsFromLocalStorage } from "../../store/reducers/contacts"
 import { GroupBy } from "../../Containers/GroupBy"
+import { MobileCircles } from "../../Components/MobileCircles"
 
 export const GroupsPage = () => {
 
@@ -21,6 +22,7 @@ export const GroupsPage = () => {
     return(
         <>
         <SideBar/>
+        <MobileCircles/>
         <MainContainer>
         <BackButton to="/">
       <FaArrowLeft size={30}/>

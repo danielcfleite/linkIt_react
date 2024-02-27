@@ -5,7 +5,6 @@ import { CiCloudMoon, CiSun } from "react-icons/ci";
 import { GrLanguage } from "react-icons/gr";
 import { FaAddressBook } from "react-icons/fa";
 import { Aside } from "./styles";
-import logo from "../../assets/brand.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../store";
 import { changeLanguage } from "../../store/reducers/language";

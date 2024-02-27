@@ -11,11 +11,11 @@ import { setFavorite } from "../../store/reducers/contacts";
 type Props = ContactClass
 
 export const ContactCard = ({fullName,
-  email,
-  phoneNumber,
+  // email,
+  // phoneNumber,
   profilePictureUrl,
   id,
-  socialMedia,
+  // socialMedia,
   group,
 isFavorite}: Props) => {
   const dispatch = useDispatch()

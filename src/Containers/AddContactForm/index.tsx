@@ -88,7 +88,7 @@ export const AddContactForm = () => {
 
     const createUser = (e:FormEvent) => {
         e.preventDefault()
-        const group = () => {
+        const groupToBeUsed = () => {
             if(formData.groupName !== ""){
                 return formData.groupName
             } else {
@@ -109,7 +109,7 @@ export const AddContactForm = () => {
             profilePictureUrl: formData.profilePictureUrl ,
             id: 2,
             socialMedia: socialMediasforUser,
-            group: formData.groupName || selectedGroup,
+            group: groupToBeUsed() || '',
             isFavorite: false,
         }
         dispatch(createContact(userToCreate))

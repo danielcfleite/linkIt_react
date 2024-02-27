@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeLanguage } from "../../store/reducers/language";
 import { RootReducer } from "../../store";
 import { toggleDarkMode } from "../../store/reducers/darkMode";
+import { FaAddressBook } from "react-icons/fa";
 
 
 export const MobileCircles = () => {
@@ -24,7 +25,10 @@ export const MobileCircles = () => {
       <MobileCirclesNav>
       <CircleButton onClick={()=> dispatch(toggleDarkMode())}>{isDark?  <><CiSun /></>: <> <CiCloudMoon /></>} </CircleButton>
         <CircleButton onClick={handleLanguageChange}> <GrLanguage size={26}/></CircleButton>
+        <CircleLink to= "/groups"> <FaAddressBook size={26}/></CircleLink>
         <CircleLink to ="/add"><IoMdAdd size={26}/></CircleLink>
+  
+
       </MobileCirclesNav>
       </> 
     )
