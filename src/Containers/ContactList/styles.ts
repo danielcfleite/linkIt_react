@@ -24,8 +24,9 @@ export const Tag = styled(EmailAndPhoneItemContainer)<TagProps>`
   margin-top: 1.5rem;
   font-weight: bold;
   background-color: ${(props) =>
-    props.selected ? colors.brand : colors.secondaryFontColor};
+  props.selected ? colors.brand :  props => props.theme.secondaryFontColor};
   opacity: ${(props) => (props.selected ? "1" : "0.6")};
+  cursor:  ${(props) => props.selected? "not-allowed": "pointer" };
 
   &:hover {
     transform: scale(1.02);

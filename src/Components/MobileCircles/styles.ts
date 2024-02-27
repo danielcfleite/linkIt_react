@@ -30,3 +30,18 @@ color: white;
 font-size: 50px;
 border: none;
 `
+
+export const CircleButton = styled.button`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: ${colors.brand};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+  border: none;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+`;

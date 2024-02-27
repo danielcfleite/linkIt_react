@@ -6,7 +6,7 @@ export const ContactCardContainer = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 1rem;
-  border: 1px solid ${colors.lowOpacityFontColor};
+  border: 1px solid ${props => props.theme.lowOpacityFontColor};
   height: 150px;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const ContactCardContainer = styled.div`
   box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
 
   &:hover {
-    background-color: ${colors.selectedGray};
+    background-color: ${props => props.theme.selectedGray};
   }
 
   img {
@@ -57,8 +57,8 @@ export const FavoriteButton = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: ${colors.lowOpacityFontColor};
-  border: 1px solid ${colors.selectedGray};
+  background-color: ${props => props.theme.lowOpacityFontColor};
+  border: 1px solid ${props => props.theme.selectedGray};
   color: ${colors.brand};
   font-size: 20px;
   display: flex;
@@ -66,6 +66,10 @@ export const FavoriteButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  
+  *{
+    color: ${colors.brand};
+  }
 
   &:hover {
     font-size: 22px;

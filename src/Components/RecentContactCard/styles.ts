@@ -5,7 +5,7 @@ export const RecentContactCardContainer = styled.div`
   min-width: 250px;
   height: 350px;
   background-color: transparent;
-  border: 1px solid ${colors.selectedGray};
+  border: 1px solid ${props => props.theme.selectedGray};
   gap: 1.3rem;
   border-radius: 16px;
   display: flex;

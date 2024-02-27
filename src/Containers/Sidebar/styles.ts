@@ -17,13 +17,14 @@ export const Aside = styled.aside`
 
   a {
     text-decoration: none;
-    color: ${colors.secondaryFontColor};
+    color: ${props => props.theme.secondaryFontColor};
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.3rem;
     border-right: 1px solid transparent;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 
     :first-child {
       transition: 0.05s ease-in-out;

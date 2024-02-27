@@ -1,18 +1,32 @@
 import { BsMailbox } from "react-icons/bs";
 import { SlPhone } from "react-icons/sl";
-import { FaLinkedin, FaInstagram, FaTiktok, FaRegStar } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa";
+import { GoStar, GoStarFill } from "react-icons/go";
 import { ContactCardContainer, FavoriteButton, Socials } from "./style";
 import { CategoryTitle } from "../../../styles";
+import ContactClass from "../../models/contact"
+import { useDispatch } from "react-redux";
+import { setFavorite } from "../../store/reducers/contacts";
 
-export const ContactCard = () => {
+type Props = ContactClass
+
+export const ContactCard = ({fullName,
+  email,
+  phoneNumber,
+  profilePictureUrl,
+  id,
+  socialMedia,
+  group,
+isFavorite}: Props) => {
+  const dispatch = useDispatch()
   return (
     <ContactCardContainer>
       <img
-        src="https://mighty.tools/mockmind-api/content/human/43.jpg"
-        alt="adicionar nome"
+        src={profilePictureUrl}
+        alt={fullName}
       />
-      <h3>Alice Johnson</h3>
-      <CategoryTitle>família</CategoryTitle>
+      <h3>{fullName}</h3>
+      <CategoryTitle>{group}</CategoryTitle>
       <Socials>
         <BsMailbox />
         <SlPhone />
@@ -20,8 +34,8 @@ export const ContactCard = () => {
         <FaLinkedin />
         <FaTiktok />
       </Socials>
-      <FavoriteButton>
-        <FaRegStar />
+      <FavoriteButton onClick={() => dispatch(setFavorite(id))}>
+        {isFavorite? <GoStarFill/> : <GoStar/> }
       </FavoriteButton>
     </ContactCardContainer>
   );

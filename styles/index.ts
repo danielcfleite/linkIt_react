@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   font-family: "Inter", sans-serif;
   list-style: none;
   user-select: none;
+  color:  ${props => props.theme.fontColor};
 
   /* width */
 ::-webkit-scrollbar {
@@ -19,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: ${colors.lightGray};
+  background-color: ${props => props.theme.lightGray};
   border-radius: 10px;
 }
 
@@ -34,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
   overflow: hidden;
+  background-color: ${props => props.theme.backgroundColor};
 }
 `;
 
@@ -67,7 +69,7 @@ export const SocialsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${colors.socialIcons};
+  color:  ${props => props.theme.socialIcons};
 
   *:hover {
     color: ${colors.brand};
@@ -83,7 +85,7 @@ export const CategoryTitle = styled.h3`
 
 export const BackButton = styled(Link)`
 text-decoration: none;
-color: ${colors.fontColor};
+color: ${props => props.theme.fontColor};
 
 &:hover {
   color: ${colors.brand};

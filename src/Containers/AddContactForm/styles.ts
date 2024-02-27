@@ -7,19 +7,31 @@ interface SelectionFormProps {
 
 interface SocialMediaContainerProps {
     selected?: boolean
+    theme: {
+        fontColor: string,
+        secondaryFontColor:  string,
+        lowOpacityFontColor:  string,
+        socialIcons:  string,
+        selectedGray: string,
+        lightGray:  string,
+        brand: string,
+        backgroundColor: string,
+    }
 }
 
 export const SectionForm = styled.div<SelectionFormProps>`
 display: flex;
-flex-direction: column;
+flex-direction: ${(props) => props.select? "row" : "column" } ;
+align-items: center;
 gap: 1rem;
 
 input{
     width: ${props => props.select? "60%" : "100%" };
+    margin: 0;
     padding: 0.7rem 0.5rem;
     border-radius: 10px;
     border: none;
-    background-color: ${colors.lowOpacityFontColor};
+    background-color: ${props => props.theme.lowOpacityFontColor};
 
     &:focus{
         outline: 2px solid ${colors.brand};
@@ -32,13 +44,12 @@ select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: ${props => props.theme.lowOpacityFontColor}; /* Set background color */
     font-size: 16px;
-    color: #333;
+    color: ${props => props.theme.fontColor};
 
-    
+    color: black;
 }
-
 
 `
 
@@ -53,14 +64,14 @@ export const SocialMediaContainer = styled.div<SocialMediaContainerProps>`
         * {
             color: ${colors.brand};
         }
-    ` : `color: ${colors.fontColor};`}
+    ` : `color: ${(props: any) => props.theme.fontcolor};`} // @ts-ignore
 
     input {
         width: 70%;
         padding: 0.7rem 0.5rem;
         border-radius: 10px;
         border: none;
-        background-color: ${colors.lowOpacityFontColor};
+        background-color:   ${props => props.theme.lowOpacityFontColor};
 
         &:focus {
             outline: 2px solid ${colors.brand};
@@ -68,8 +79,8 @@ export const SocialMediaContainer = styled.div<SocialMediaContainerProps>`
     }
 `;
 
-export const SubmitButton = styled.button `
-margin-top: 1rem;
+export const Button = styled.button `
+
 padding: 0.8rem 1rem ;
 border-radius: 15px;
 border: none;
@@ -83,6 +94,9 @@ display: flex;
 align-items: center;
 gap: 0.7rem;
 
+&[type="submit"]{
+    margin-top: 3rem;
+}
 
 &:hover{
     filter: brightness(1.06)

@@ -8,17 +8,26 @@ import {
   NameAndCateoryContainer,
 } from "./styles";
 import { CategoryTitle, SocialsContainer } from "../../../styles";
+import ContactClass from "../../models/contact"
+type Props = ContactClass
 
-export const RecentContactCard = () => {
+export const RecentContactCard = ({fullName,
+  email,
+  phoneNumber,
+  profilePictureUrl,
+  id,
+  socialMedia,
+  group,
+isFavorite}: Props) => {
   return (
     <RecentContactCardContainer>
       <NameAndCateoryContainer>
-        <h2>Alice Johnson</h2>
-        <CategoryTitle>família</CategoryTitle>
+        <h2>{fullName}</h2>
+        <CategoryTitle>{group}</CategoryTitle>
       </NameAndCateoryContainer>
       <img
-        src="https://mighty.tools/mockmind-api/content/human/43.jpg"
-        alt="adicionar nome"
+        src= {profilePictureUrl}
+        alt={fullName}
       />
       <EmailAndPhoneContainer>
         <EmailAndPhoneItemContainer>
