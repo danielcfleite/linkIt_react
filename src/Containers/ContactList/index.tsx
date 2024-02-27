@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { SectionTitle } from "../../../styles";
 import { ContactCard } from "../../Components/ContactCard";
 import { ContactListHeader, Tag, TagContainer } from "./styles";
@@ -8,7 +8,6 @@ import { useState } from "react";
 export const ContactList = () => {
   const {language} = useSelector((state:RootReducer)=> state.language)
   const {contacts} = useSelector((state:RootReducer)=> state.contacts)
-  const {uniqueGroups} = useSelector((state:RootReducer)=> state.contacts)
   const [isSearchFavorites, setIsSearchFavorites] = useState(false)
   const favorites = contacts.filter((c)=> c.isFavorite === true)
   
