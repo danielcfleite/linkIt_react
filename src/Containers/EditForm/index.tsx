@@ -33,7 +33,7 @@ export const EditForm = ({ id }: { id: string }) => {
 const {language} = useSelector((state:RootReducer)=> state.language)
 const {contacts} = useSelector((state:RootReducer)=> state.contacts)
 const user = contacts.find((c)=> c.id === id)
-const { email, fullName, group, isFavorite, phoneNumber, socialMedia, profilePictureUrl } = user!;
+const { email, fullName,  isFavorite, phoneNumber, profilePictureUrl } = user!;
 const {facebook,github,instagram,linkedin,tiktok} = user!.socialMedia
 const [focused, setFocused] = useState('')
 const dispatch = useDispatch()
