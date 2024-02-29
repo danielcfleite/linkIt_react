@@ -36,13 +36,14 @@ export const GroupBy = () => {
             value={filter}
             onChange={(e) => handleChangeFilter(e)}
             >
+               <option value=" "> </option>
               {uniqueGroups.map((g, index) => (
                 <option value={g} key={index}>
                   {g}
                 </option>
                 
               ))}
-              <option value="oi"/>
+             
             </select>
             </SectionForm>
             {filteredResults.map((f)=>(

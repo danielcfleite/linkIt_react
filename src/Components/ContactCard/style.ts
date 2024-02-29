@@ -3,19 +3,19 @@ import { colors } from "../../../styles/variables";
 import { SocialsContainer } from "../../../styles";
 
 export const ContactCardContainer = styled.div`
-  display: flex;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 900%;
   margin-bottom: 1rem;
   border: 1px solid ${props => props.theme.lowOpacityFontColor};
   height: 150px;
-  align-items: center;
-  justify-content: space-between;
   padding-right: 40px;
   padding-left: 15px;
   cursor: pointer;
   border-radius: 16px;
-  -webkit-box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
-  box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
+  -webkit-box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.01);
+  box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.01);
 
   &:hover {
     background-color: ${props => props.theme.selectedGray};
@@ -29,10 +29,12 @@ export const ContactCardContainer = styled.div`
   }
 
   @media (max-width: 1400px){
+     display: flex;
      flex-direction: column;
      width: 100%;
      padding: 4rem 0;
      height: 350px;
+     gap: 1rem;
   }
 `;
 
@@ -75,3 +77,43 @@ export const FavoriteButton = styled.button`
     font-size: 22px;
   }
 `;
+
+export const ContactOptionContainer = styled.div`
+width: 100%;
+display: flex;
+gap: 20px;
+align-items: center;
+
+@media (max-width: 1400px){
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     padding: 4rem 0;
+     gap: 1rem;
+  }
+`
+
+export const ButtonsContainer = styled.div`
+width: 100%;
+display: flex;
+align-items: center;
+gap: 16px;
+
+@media (max-width: 1400px){
+     display: flex;
+     flex-direction: column;
+     width: 20%;
+     justify-content: center;
+     gap: 1rem;
+  }
+`
+
+export const RemoveButton = styled(FavoriteButton)`
+*{
+  color: #d04848;
+}
+
+&:hover{
+  filter: brightness(1.1);
+}
+`

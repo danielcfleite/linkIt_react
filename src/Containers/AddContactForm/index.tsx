@@ -7,6 +7,7 @@ import { FocusEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../store";
 import { createContact } from "../../store/reducers/contacts";
+import { v4 as uuidv4 } from 'uuid'; //
 
 interface FormData {
     fullName: string;
@@ -88,6 +89,7 @@ export const AddContactForm = () => {
 
     const createUser = (e:FormEvent) => {
         e.preventDefault()
+        const userId = uuidv4();
         const groupToBeUsed = () => {
             if(formData.groupName !== ""){
                 return formData.groupName
@@ -107,7 +109,7 @@ export const AddContactForm = () => {
             email: formData.email ,
             phoneNumber: formData.phoneNumber ,
             profilePictureUrl: formData.profilePictureUrl ,
-            id: 2,
+            id: userId,
             socialMedia: socialMediasforUser,
             group: groupToBeUsed() || '',
             isFavorite: false,

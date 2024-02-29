@@ -12,8 +12,8 @@ export const RecentContactCardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  -webkit-box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
-  box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.005);
+  -webkit-box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.01);
+  box-shadow: 2px 5px 11px 2px rgba(0, 0, 0, 0.01);
   cursor: pointer;
   transition: 0.1s;
 

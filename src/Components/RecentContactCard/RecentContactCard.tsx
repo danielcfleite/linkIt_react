@@ -1,6 +1,6 @@
 import { BsMailbox } from "react-icons/bs";
 import { SlPhone } from "react-icons/sl";
-import { FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTiktok, FaFacebook, FaGithub } from "react-icons/fa";
 import {
   RecentContactCardContainer,
   EmailAndPhoneContainer,
@@ -9,42 +9,30 @@ import {
 } from "./styles";
 import { CategoryTitle, SocialsContainer } from "../../../styles";
 import ContactClass from "../../models/contact"
+import { useNavigate } from "react-router-dom";
 type Props = ContactClass
 
 export const RecentContactCard = ({fullName,
   // email,
   // phoneNumber,
   profilePictureUrl,
-  // id,
-  // socialMedia,
+  id,
+  socialMedia,
   group,
 // isFavorite
 }: Props) => {
+  const navigate = useNavigate()
   return (
-    <RecentContactCardContainer>
+ 
+    <RecentContactCardContainer onClick={()=> navigate(`/user/${id}`)}>
+         <img
+    src= {profilePictureUrl}
+    alt={fullName}
+  />
       <NameAndCateoryContainer>
         <h2>{fullName}</h2>
         <CategoryTitle>{group}</CategoryTitle>
       </NameAndCateoryContainer>
-      <img
-        src= {profilePictureUrl}
-        alt={fullName}
-      />
-      <EmailAndPhoneContainer>
-        <EmailAndPhoneItemContainer>
-          <BsMailbox />
-          Email
-        </EmailAndPhoneItemContainer>
-        <EmailAndPhoneItemContainer>
-          <SlPhone />
-          Telefone
-        </EmailAndPhoneItemContainer>
-      </EmailAndPhoneContainer>
-      <SocialsContainer>
-        <FaInstagram />
-        <FaTiktok />
-        <FaLinkedin />
-      </SocialsContainer>
     </RecentContactCardContainer>
   );
 };

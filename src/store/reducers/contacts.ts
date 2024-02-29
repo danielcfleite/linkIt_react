@@ -14,8 +14,14 @@ const initialState: ContactsState = {
         email: "danielcfreitasleite@gmail.com",
         phoneNumber: "12 98293-4040",
         profilePictureUrl: "https://github.com/danielcfleite.png",
-        id: 1,
-        socialMedia: {},
+        id: "aoba",
+        socialMedia: {
+          facebook: "danielcfleite",
+          github: "/danielcfleite",
+          instagram: "/danielcfleite",
+          linkedin: "/danielcfleite",
+          tiktok: "/danielcfleite"
+        },
         isFavorite: false
     }    
   ],
@@ -30,7 +36,7 @@ const contactsSlice = createSlice({
     state.contacts.push(action.payload)
     localStorage.setItem('contacts', JSON.stringify(state.contacts))
    },
-   setFavorite: (state, action:PayloadAction<number>) => {
+   setFavorite: (state, action:PayloadAction<string>) => {
     const userToFavorite = state.contacts.find(c => c.id === action.payload) 
     if (!userToFavorite) {
       alert ('usuário não encontrado')
@@ -52,10 +58,15 @@ const contactsSlice = createSlice({
     if (storedContacts) {
       state.contacts = JSON.parse(storedContacts)
     }
+   },
+   deleteContact: (state, action:PayloadAction<string>) =>{
+    const userIdToDelete = action.payload
+    state.contacts = state.contacts.filter((c) => c.id !== userIdToDelete)
+    localStorage.setItem('contacts', JSON.stringify(state.contacts))
    }
   }
 })
 
-export const { createContact, setFavorite, getUniqueGroups, loadContactsFromLocalStorage } = contactsSlice.actions
+export const { createContact, setFavorite, getUniqueGroups, loadContactsFromLocalStorage, deleteContact } = contactsSlice.actions
 
 export default contactsSlice.reducer

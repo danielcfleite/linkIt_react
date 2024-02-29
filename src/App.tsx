@@ -8,6 +8,7 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme } from "./themes/dark";
 import { lightTheme } from "./themes/light";
 import { GroupsPage } from "./pages/Groups";
+import { UserPage } from "./pages/User";
 
 // Define your routes
 const routes = createBrowserRouter([
@@ -23,6 +24,10 @@ const routes = createBrowserRouter([
     path: "/groups",
     element: <GroupsPage />,
   },
+  {
+    path: "/user/:id",
+    element: <UserPage/>
+  }
 ]);
 
 function App() {

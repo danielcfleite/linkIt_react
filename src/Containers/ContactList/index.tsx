@@ -5,6 +5,7 @@ import { ContactListHeader, Tag, TagContainer } from "./styles";
 import { RootReducer } from "../../store";
 import { useState } from "react";
 
+
 export const ContactList = () => {
   const {language} = useSelector((state:RootReducer)=> state.language)
   const {contacts} = useSelector((state:RootReducer)=> state.contacts)

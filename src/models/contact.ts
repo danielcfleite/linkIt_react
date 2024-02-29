@@ -11,7 +11,7 @@ class Contact {
   email: string
   phoneNumber: string
   profilePictureUrl: string
-  id: number
+  id: string
   socialMedia: SocialMediaList
   group: string
   isFavorite: boolean
@@ -21,7 +21,7 @@ class Contact {
     email: string,
     phoneNumber: string,
     profilePictureUrl: string,
-    id: number,
+    id: string,
     socialMedia:SocialMediaList,
     group: string,
     isFavorite: boolean
