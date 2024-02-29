@@ -37,7 +37,9 @@ font-size: 1.3rem;
 `
 
 export const UserSocialMediaContainer = styled.div`
-
+&:first-of-type{
+    margin-top: 1rem;
+}
 display: grid;
 grid-template-columns: 30px 290px 110px;
 width: 500px;

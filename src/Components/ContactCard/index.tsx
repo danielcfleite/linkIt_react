@@ -10,8 +10,6 @@ import { FaTrashAlt } from "react-icons/fa";
 type Props = ContactClass
 
 export const ContactCard = ({fullName,
-  // email,
-  // phoneNumber,
   profilePictureUrl,
   id,
   group,
