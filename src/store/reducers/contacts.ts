@@ -68,8 +68,8 @@ const contactsSlice = createSlice({
     const userToEditIndex = state.contacts.findIndex((c) => c.id === action.payload.id)
     if (userToEditIndex >= 0) {
       state.contacts[userToEditIndex] = action.payload
+      localStorage.setItem('contacts', JSON.stringify(state.contacts))
     }
-    localStorage.setItem('contacts', JSON.stringify(state.contacts))
    },
   }
 })
