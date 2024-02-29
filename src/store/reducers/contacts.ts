@@ -9,18 +9,18 @@ type ContactsState = {
 const initialState: ContactsState = {
   contacts: [
     { 
-        group: "Família",
-        fullName: 'Daniel Carvalho',
-        email: "danielcfreitasleite@gmail.com",
-        phoneNumber: "12 98293-4040",
-        profilePictureUrl: "https://github.com/danielcfleite.png",
-        id: "aoba",
+        group: "",
+        fullName: '',
+        email: "",
+        phoneNumber: "",
+        profilePictureUrl: "",
+        id: "",
         socialMedia: {
-          facebook: "danielcfleite",
-          github: "/danielcfleite",
-          instagram: "/danielcfleite",
-          linkedin: "/danielcfleite",
-          tiktok: "/danielcfleite"
+          facebook: "",
+          github: "",
+          instagram: "",
+          linkedin: "",
+          tiktok: ""
         },
         isFavorite: false
     }    
