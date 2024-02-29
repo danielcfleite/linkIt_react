@@ -1,7 +1,5 @@
-import { BsMailbox } from "react-icons/bs";
-import { SlPhone } from "react-icons/sl";
 import { GoStar, GoStarFill } from "react-icons/go";
-import { ButtonsContainer, ContactCardContainer, ContactOptionContainer, FavoriteButton, RemoveButton, Socials } from "./style";
+import { ButtonsContainer, ContactCardContainer, ContactOptionContainer, FavoriteButton, RemoveButton} from "./style";
 import { CategoryTitle } from "../../../styles";
 import ContactClass from "../../models/contact"
 import { useDispatch } from "react-redux";

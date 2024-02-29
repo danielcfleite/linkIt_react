@@ -1,5 +1,5 @@
 import { FaArrowLeft } from "react-icons/fa"
-import { BackButton, CategoryTitle, MainContainer, PageTitle } from "../../../styles"
+import { BackButton, CategoryTitle, MainContainer } from "../../../styles"
 import { MobileCircles } from "../../Components/MobileCircles"
 import { SideBar } from "../../Containers/Sidebar"
 import { useSelector } from "react-redux"
@@ -12,11 +12,10 @@ import { FaLinkedin, FaInstagram, FaTiktok, FaGithub, FaFacebook } from "react-i
 import { IoIosSend } from "react-icons/io";
 
 export const UserPage = () => { 
-    const {language} = useSelector((state:RootReducer)=> state.language)
     const {contacts} = useSelector((state:RootReducer)=> state.contacts)
     const { id } = useParams();
     const user = contacts.find((c) => c.id === id)
-    const {email,fullName,group,isFavorite,phoneNumber,profilePictureUrl,socialMedia } = user! 
+    const {email,fullName,group,phoneNumber,profilePictureUrl,socialMedia } = user! 
     const {facebook,github,instagram,linkedin,tiktok} = socialMedia!
 
     if (!user) {
