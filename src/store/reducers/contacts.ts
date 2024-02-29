@@ -9,15 +9,15 @@ type ContactsState = {
 const initialState: ContactsState = {
   contacts: [
     { 
-        group: "",
-        fullName: '',
+        group: "Desenvolvedor",
+        fullName: 'Daniel Carvalho',
         email: "",
         phoneNumber: "",
-        profilePictureUrl: "",
-        id: "",
+        profilePictureUrl: "https://github.com/danielcfleite.png",
+        id: "1",
         socialMedia: {
           facebook: "",
-          github: "",
+          github: "/danielcfleite",
           instagram: "",
           linkedin: "",
           tiktok: ""
