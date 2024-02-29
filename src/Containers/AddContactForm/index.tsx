@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../store";
 import { createContact } from "../../store/reducers/contacts";
 import { v4 as uuidv4 } from 'uuid'; //
+import { useNavigate } from "react-router-dom";
 
 interface FormData {
     fullName: string;
@@ -38,6 +39,7 @@ export const AddContactForm = () => {
     const isSelected = (inputName: string) => {
         return focused === inputName;
     };
+    const navigate = useNavigate()
     const [willCreateGroup, setWillCreateGroup] = useState(false)
     const [selectedGroup, setSelectedGroup] = useState('')
     const [SocialMediaData, setSocialMediaData] = useState<SocialMediaData>({
@@ -115,6 +117,7 @@ export const AddContactForm = () => {
             isFavorite: false,
         }
         dispatch(createContact(userToCreate))
+        navigate('/')
     }
 
 

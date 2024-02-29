@@ -7,7 +7,7 @@ export const store = configureStore({
   reducer: {
     language: languageReducer,
     darkMode: darkModeReducer,
-    contacts: contactsReducer
+    contacts: contactsReducer,
   }
 })
 
