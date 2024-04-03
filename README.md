@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# LinkIt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/danielcfleite/linkIt_react/assets/107118708/12020eba-2ce1-4dad-bf29-45fe61873196)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1 align="center"> LinkIt! </h1>
 
-## Expanding the ESLint configuration
+<p align="center">
+LinkIt is a web application to keep track of your contacts, their social media accounts, phone number and email. Developed with React, Styled Components and Redux. As a personal project, i've planned the design and functionalities from scratch. 
+  <br/>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<p align="center">
+  <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-- Configure the top-level `parserOptions` property like this:
+<p align="center">
+  ![image](https://github.com/danielcfleite/linkIt_react/assets/107118708/c8695b44-6a35-4b67-b918-277f551cf6e8)
+</p>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<br>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## 💻 Project
+![image](https://github.com/danielcfleite/linkIt_react/assets/107118708/a9df095c-e615-41a4-9c83-279fa53ec5e6)
+
+
+[You can acess the project here!](https://vercel.com/danielcfleite/link-it-react)
+
+
+## 🚀 Technologies
+
+This project uses the following technologies: 
+
+- Styled Components
+- Redux
+- Typescript
+- React
+- Vite
