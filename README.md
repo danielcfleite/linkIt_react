@@ -14,10 +14,6 @@ LinkIt is a web application to keep track of your contacts, their social media a
   <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-<p align="center">
-  ![image](https://github.com/danielcfleite/linkIt_react/assets/107118708/c8695b44-6a35-4b67-b918-277f551cf6e8)
-</p>
-
 <br>
 
 
